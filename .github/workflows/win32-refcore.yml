@@ -13,7 +13,7 @@ jobs:
       - name: Build refcore (Win32, /fp:precise)
         shell: cmd
         run: |
-          cl /nologo /O2 /fp:precise /W3 ^
+          cl /nologo /std:c++17 /EHsc /O2 /fp:precise /W3 ^
              /I covf-metal\shim /I src ^
              covf-metal\covcore\refcore.cpp src\fog_model.cpp src\fog_data.cpp ^
              /Fe:refcore.exe
